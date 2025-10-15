@@ -122,7 +122,7 @@
               <h4>Become the Best</h4>
               <p>Industry-focused courses that make you career-ready with practical skills and expert guidance.</p>
               <div class="main-button">
-                <a href="#">Read More</a>
+                <a href="become-the-best.html">Read More</a>
               </div>
             </div>
           </div>
@@ -136,7 +136,7 @@
               <h4>Explore New Horizons</h4>
               <p>Weekend sessions designed to boost your creativity, knowledge, and personal growth.</p>
               <div class="main-button">
-                <a href="#">Read More</a>
+                <a href="explore-new-horizons - Copy.html">Read More</a>
               </div>
             </div>
           </div>
@@ -150,7 +150,7 @@
               <h4>Career Assistance</h4>
               <p>Paid internships and placement support to help you step confidently into your career.</p>
               <div class="main-button">
-                <a href="#">Read More</a>
+                <a href="career-assistance.html">Read More</a>
               </div>
             </div>
           </div>
@@ -606,7 +606,30 @@ We started Exponenza with a simple idea: learning should be clear, practical, an
         </div>
         <div class="col-lg-6">
           <div class="contact-us-content">
-            <form id="contact-form" action="" method="post">
+            <form id="contact-form"> 
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message"></textarea>
+  <button type="submit">Send</button>
+</form>
+
+<script>
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  fetch('https://sheetdb.io/api/v1/mg9uyy4juqa4f', { 
+    method: 'POST',
+    body: new FormData(this)
+  }).then(response => {
+    if (response.ok) {
+      alert('Message sent successfully!');
+      this.reset();
+    } else {
+      alert('Something went wrong. Please try again.');
+    }
+  });
+});
+</script>
+
               <div class="row">
                 <div class="col-lg-12">
                   <fieldset>
@@ -644,8 +667,7 @@ We started Exponenza with a simple idea: learning should be clear, practical, an
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <!-- Bootstrap core JavaScript -->
+
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
   <script src="assets/js/isotope.min.js"></script>
