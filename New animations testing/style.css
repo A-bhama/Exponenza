@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+.hero {
+  height: 100vh;
+  background: #292929;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.title h1 {
+  font-size: 70px;
+  font-weight: 500;
+  position: relative;
+  z-index: 10;
+}
+
+.back-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.back-text span {
+  display: inline-block;
+  font-size: 300px;
+  font-weight: 700;
+  -webkit-text-stroke: 1px rgba(255,255,255,0.3);
+  -webkit-text-fill-color: transparent;
+  transform: translateY(100px);
+  transition: transform 0.6s ease;
+}
+
+.back-text span.active {
+  transform: translateY(0);
+}
